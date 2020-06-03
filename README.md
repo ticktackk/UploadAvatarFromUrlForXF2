@@ -17,3 +17,8 @@ Permissions
 | Group               | Permission                |
 | ------------------- | ------------------------- |
 | General permissions | Upload an avatar from URL |
+
+License
+-------
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/ticktackk/UploadAvatarFromUrlForXF2/blob/master/LICENSE.md) file for details.
