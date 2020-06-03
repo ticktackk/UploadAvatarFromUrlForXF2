@@ -1,4 +1,10 @@
 {
+    "additional_files": [
+        "js/ticktackk/upload_avatar_from_url/xf/avatar.js"
+    ],
+    "minify": [
+        "js/ticktackk/upload_avatar_from_url/xf/avatar.js"
+    ],
     "exec": [
         "composer install --working-dir=_build/upload/src/addons/{addon_id}/ --no-dev --optimize-autoloader"
     ],
