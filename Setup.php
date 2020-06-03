@@ -9,7 +9,7 @@ use XF\AddOn\StepRunnerUpgradeTrait;
 
 /**
  * Class Setup
- * 
+ *
  * @package TickTackk\UploadAvatarFromUrl
  */
 class Setup extends AbstractSetup

@@ -1,0 +1,9 @@
+{
+    "template": "account_avatar",
+    "description": "Allow uploading from url",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "#(<xf:radio name=\"use_custom\".*?xf:dependent>)(.*?<label>(.*?)<\\/label>(.*?)(<dfn class=\"inputChoices-explain.*?>.*?<\\/dfn>))#si",
+    "replace": "$1<xf:if is=\"$xf.visitor.canUploadAvatarFromUrl()\">\n\t<xf:radio name=\"custom_type\" value=\"file\">\n\t\t<xf:option value=\"file\" label=\"$3\" class=\"js-tckUploadAvatarFromUrl_customType\">\n\t\t\t$4\n\t\t</xf:option>\n\t\t<xf:option value=\"url\" label=\"{{ phrase('tckUploadAvatarFromUrl_upload_new_custom_avatar_from_url') }}\"  class=\"js-tckUploadAvatarFromUrl_customType\">\n\t\t\t<xf:textbox name=\"url\" type=\"url\" class=\"js-tckUploadAvatarFromUrl_urlField\" />\n\t\t</xf:option>\n\t</xf:radio>\n\t$5\n<xf:else />\n\t$2\n</xf:if>"
+}

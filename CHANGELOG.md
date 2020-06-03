@@ -1,6 +1,6 @@
 CHANGELOG
 ==========================
 
-## 1.0.0 Alpha 1 (`1000011`)
+## 1.0.0 (`1000070`)
 
-First alpha release.
+First release.
