@@ -19,3 +19,6 @@ This add-on allows users with permission to upload avatar from URL.
 [TD]Upload an avatar from URL[/TD]
 [/TR]
 [/TABLE]
+
+[SIZE=5][B]License[/B][/SIZE]
+This project is licensed under the MIT License - see the [URL='https://github.com/ticktackk/UploadAvatarFromUrlForXF2/blob/master/LICENSE.md']LICENSE.md[/URL] file for details.
