@@ -10,3 +10,10 @@ Requirements
 ------------
 
 - PHP 7.3+
+
+Permissions
+-----------
+
+| Group               | Permission                |
+| ------------------- | ------------------------- |
+| General permissions | Upload an avatar from URL |

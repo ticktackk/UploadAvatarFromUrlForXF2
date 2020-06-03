@@ -7,3 +7,15 @@ This add-on allows users with permission to upload avatar from URL.
 [LIST]
 [*]PHP 7.3+
 [/LIST]
+
+[SIZE=5][B]Permissions[/B][/SIZE]
+[TABLE]
+[TR]
+[TH]Group[/TH]
+[TH]Permission[/TH]
+[/TR]
+[TR]
+[TD]General permissions[/TD]
+[TD]Upload an avatar from URL[/TD]
+[/TR]
+[/TABLE]
