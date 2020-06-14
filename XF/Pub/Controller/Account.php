@@ -67,7 +67,7 @@ class Account extends XFCP_Account
                     
                     if (!$avatarService->setImage($tempFile))
                     {
-                        throw $this->exception($avatarService->getError());
+                        throw $this->exception($this->error($avatarService->getError()));
                     }
 
                     if (!$avatarService->updateAvatar())
