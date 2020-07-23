@@ -95,7 +95,7 @@ class Account extends XFCP_Account
                         $avatarService->setCrop($cropX, $cropY);
                         if (!$avatarService->updateAvatar())
                         {
-                            return $this->error(\XF::phrase('new_avatar_could_not_be_processed'));
+                            throw $this->exception($this->error(\XF::phrase('new_avatar_could_not_be_processed')));
                         }
                     }
                     else
