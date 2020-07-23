@@ -3,22 +3,13 @@
 namespace TickTackk\UploadAvatarFromUrl\XF\Pub\Controller;
 
 use TickTackk\UploadAvatarFromUrl\XF\Entity\User as ExtendedUserEntity;
-use XF\Mvc\Reply\AbstractReply;
 use XF\Mvc\Reply\View as ViewReply;
 use XF\Mvc\Reply\Redirect as RedirectReply;
-use XF\Mvc\Reply\Reroute as RerouteReply;
-use XF\Mvc\Reply\Message as MessageReply;
 use XF\Mvc\Reply\Exception as ExceptionReply;
 use XF\Mvc\Reply\Error as ErrorReply;
 use XF\Util\File as FileUtil;
+use XF\Service\User\Avatar as UserAvatarChangerSvc;
 
-/**
- * Class Account
- * 
- * Extends \XF\Pub\Controller\Account
- *
- * @package TickTackk\UploadAvatarFromUrl\XF\Pub\Controller
- */
 class Account extends XFCP_Account
 {
     /**
@@ -47,7 +38,7 @@ class Account extends XFCP_Account
                     throw $this->exception($this->noPermission($error));
                 }
 
-                /** @var \XF\Service\User\Avatar $avatarService */
+                /** @var UserAvatarChangerSvc $avatarService */
                 $avatarService = $this->service('XF:User\Avatar', $visitor);
 
                 if (\strlen($input['url']))
@@ -79,29 +70,8 @@ class Account extends XFCP_Account
                     {
                         return $this->view('XF:Account\AvatarUpdate', '');
                     }
-                    else
-                    {
-                        return $this->redirect($this->buildLink('account/avatar'));
-                    }
-                }
-                else if ($visitor->avatar_date)
-                {
-                    // recrop existing avatar
-                    $cropX = $this->filter('avatar_crop_x', 'uint');
-                    $cropY = $this->filter('avatar_crop_y', 'uint');
-                    if ($cropX != $visitor->Profile->avatar_crop_x || $cropY != $visitor->Profile->avatar_crop_y)
-                    {
-                        $avatarService->setImageFromExisting();
-                        $avatarService->setCrop($cropX, $cropY);
-                        if (!$avatarService->updateAvatar())
-                        {
-                            return $this->error(\XF::phrase('new_avatar_could_not_be_processed'));
-                        }
-                    }
-                    else
-                    {
-                        $avatarService->removeGravatar();
-                    }
+
+                    return $this->redirect($this->buildLink('account/avatar'));
                 }
             }
         }
