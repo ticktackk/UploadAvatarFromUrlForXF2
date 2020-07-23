@@ -3,7 +3,7 @@ CHANGELOG
 
 ## 1.0.2 (`1000270`)
 
-- **Change:** Throw exception reply when resizing existing avatar (#6)
+- **Change:** Minor code improvement and clean up (#7)
 
 ## 1.0.1 (`1000170`)
 

@@ -2,17 +2,8 @@
 
 namespace TickTackk\UploadAvatarFromUrl\XF\Entity;
 
-use XF\Mvc\Entity\Entity;
-use XF\Mvc\Entity\Structure as EntityStructure;
 use XF\Phrase;
 
-/**
- * Class User
- * 
- * Extends \XF\Entity\User
- *
- * @package TickTackk\UploadAvatarFromUrl\XF\Entity
- */
 class User extends XFCP_User
 {
     /**
@@ -20,7 +11,7 @@ class User extends XFCP_User
      *
      * @return bool
      */
-    public function canUploadAvatarFromUrl(Phrase &$error = null) : bool
+    public function canUploadAvatarFromUrl(/** @noinspection PhpUnusedParameterInspection */ Phrase &$error = null) : bool
     {
         if (!$this->user_id)
         {
