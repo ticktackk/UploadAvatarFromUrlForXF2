@@ -4,6 +4,7 @@ CHANGELOG
 ## 1.0.3 (`1000370`)
 
 - **Fix:**  Incompatibility with XenForo 2.3 (#9)
+- **Fix:** Extended `avatar.js` is loaded even without permission to upload avatar from URL (#10)
 
 ## 1.0.2 (`1000270`)
 

@@ -5,5 +5,5 @@
     "enabled": true,
     "action": "preg_replace",
     "find": "{^<xf:js (?:src|prod)=\"xf\\/avatar(?:-compiled)?\\.js\".*?\\/>$}m",
-    "replace": "$0\n<xf:if is=\"$xf.versionId >= 2030000\">\n\t<xf:js src=\"ticktackk/upload_avatar_from_url/xf/avatar.23x.js\" min=\"1\" addon=\"TickTackk/UploadAvatarFromUrl\" />\n<xf:else />\n\t<xf:js src=\"ticktackk/upload_avatar_from_url/xf/avatar.js\" min=\"1\" addon=\"TickTackk/UploadAvatarFromUrl\" />\n</xf:if>"
+    "replace": "$0\n\n<xf:if is=\"$xf.visitor.canUploadAvatarFromUrl()\">\n\t<xf:if is=\"$xf.versionId >= 2030000\">\n\t\t<xf:js src=\"ticktackk/upload_avatar_from_url/xf/avatar.23x.js\" min=\"1\" addon=\"TickTackk/UploadAvatarFromUrl\" />\n\t<xf:else />\n\t\t<xf:js src=\"ticktackk/upload_avatar_from_url/xf/avatar.js\" min=\"1\" addon=\"TickTackk/UploadAvatarFromUrl\" />\n\t</xf:if>\n</xf:if>"
 }
