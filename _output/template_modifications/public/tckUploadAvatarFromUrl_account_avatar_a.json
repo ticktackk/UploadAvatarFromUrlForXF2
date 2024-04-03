@@ -1,6 +1,6 @@
 {
     "template": "account_avatar",
-    "description": "Load extended avatar.js (2.1.x - 2.2.x)",
+    "description": "Load extended avatar.js",
     "execution_order": 10,
     "enabled": true,
     "action": "preg_replace",
