@@ -1,9 +1,9 @@
 {
     "template": "account_avatar",
-    "description": "Load extended avatar.js",
+    "description": "Load extended avatar.js (2.1.x - 2.2.x)",
     "execution_order": 10,
     "enabled": true,
     "action": "preg_replace",
-    "find": "#<xf:js prod=\"xf\\/avatar-compiled\\.js\".*?\\/>#si",
-    "replace": "$0\n<xf:js src=\"ticktackk/upload_avatar_from_url/xf/avatar.js\" min=\"1\" addon=\"TickTackk/UploadAvatarFromUrl\" />"
+    "find": "{^<xf:js (?:src|prod)=\"xf\\/avatar(?:-compiled)?\\.js\".*?\\/>$}m",
+    "replace": "$0\n<xf:if is=\"$xf.versionId >= 2030000\">\n\t<xf:js src=\"ticktackk/upload_avatar_from_url/xf/avatar.23x.js\" min=\"1\" addon=\"TickTackk/UploadAvatarFromUrl\" />\n<xf:else />\n\t<xf:js src=\"ticktackk/upload_avatar_from_url/xf/avatar.js\" min=\"1\" addon=\"TickTackk/UploadAvatarFromUrl\" />\n</xf:if>"
 }
