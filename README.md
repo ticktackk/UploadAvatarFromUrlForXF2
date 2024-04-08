@@ -14,9 +14,9 @@ Requirements
 Permissions
 -----------
 
-| Group               | Permission                |
-| ------------------- | ------------------------- |
-| General permissions | Upload an avatar from URL |
+#### General permissions
+
+- Upload an avatar from URL
 
 License
 -------
